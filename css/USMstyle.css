@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 1px;
+  background: #606060;
+}
+
+/* En-tête de la page web */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-image: url("Fond Site.jpg");
+  background-color: #FFFF00;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: #000000;
+}
+
+.header h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+  }
+  
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: grayText;
+    font-family: Arial;
+  }
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5a4dbe;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    color: black
+  }
+/* Style de la barre de navigation principale */
+.topnav {
+  overflow: hidden;
+  background-color: #CECECE;
+}
+
+/* Style des liens de la barre de navigation principale */
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Changement de couleur quand on passe au-dessus */
+.topnav a:hover {
+  background-color: #fff;
+  color: #24225c;
+}
+
+/* Création de 2 colonnes inégales flottant côte à côte */
+/* Colonne gauche */
+.leftcolumn {   
+  float: left;
+  width: 75%
+}
+
+/* Colonne droite */
+.rightcolumn {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Pour que le menu reste au-dessus des autres éléments */
+  box-shadow: 0 4px 2px -2px gray; /* Ombre pour effet de profondeur */
+  float: left;
+  width: 25%;
+  background-color: #CECECE;
+  padding-left: 20px;
+  
+}
+
+/* Image */
+.image {
+  background-color: #606060;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Ajoute des cartes pour encadrer les sujets */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Arrange les colonnes flottantes */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ /* Pied de page */
+  .footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  
+  }
+  
+  .indexed {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    
+  }
+  /* Menu latéral */
+  .sidenav {
+    height: 100vh; /* Hauteur complète de l'écran */
+    width: 250px;
+    position: fixed;
+    z-index: 6; /* Corrige le double z-index */
+    top: 0;
+    left: -250px;
+    background-color: #24225c;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+  
+    display: flex;
+    flex-direction: column; /* Organise en colonne */
+    justify-content: space-between; /* Répartit l’espace */
+  }
+  .dark-mode .sidenav {
+  background-color: #242424;
+}
+
+  /* Style des liens dans le menu latéral */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+  }
+  .dark-mode .sidenav a {
+    color: #c5e4ff;
+  }
+  
+  .sidenav a:hover {
+    background-color: #343363;
+    color: white;
+  }
+  
+  .sidenav-bottom {
+    margin-top: auto; /* Pousse la section en bas */
+    padding-bottom: 70px; /* Ajoute un peu d'espace en bas */
+  }
+  
+  /* Bouton pour ouvrir le menu */
+  .openbtn {
+    font-size: 20px;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    z-index: 5;
+  }
+  
+  /* Bouton pour fermer le menu */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 7
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
